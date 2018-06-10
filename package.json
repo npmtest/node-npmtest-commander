@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "#### basic test coverage for  [commander (v2.9.0)](https://github.com/tj/commander.js#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-commander.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-commander) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-commander.svg)](https://travis-ci.org/npmtest/node-npmtest-commander)",
+    "description": "#### basic test coverage for  [commander (2.15.1)](https://github.com/tj/commander.js#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-commander.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-commander) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-commander.svg)](https://travis-ci.org/npmtest/node-npmtest-commander)",
     "devDependencies": {
         "commander": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
@@ -19,6 +19,8 @@
     "main": "lib.npmtest_commander.js",
     "name": "npmtest-commander",
     "nameAlias": "npmtest_commander",
+    "nameAliasPublish": "",
+    "nameLib": "npmtest_commander",
     "nameOriginal": "npmtest-commander",
     "os": [
         "darwin",
@@ -29,12 +31,13 @@
         "url": "https://github.com/npmtest/node-npmtest-commander.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh",
-        "env": "env",
-        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
-        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
-        "start": "PORT=${PORT:-8080} utility2 start test.js",
-        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+        "build-ci": "./npm_scripts.sh",
+        "eval": "./npm_scripts.sh",
+        "heroku-postbuild": "./npm_scripts.sh",
+        "postinstall": "./npm_scripts.sh",
+        "start": "./npm_scripts.sh",
+        "test": "./npm_scripts.sh",
+        "utility2": "./npm_scripts.sh"
     },
-    "version": "2017.4.25"
+    "version": "2018.6.10"
 }
